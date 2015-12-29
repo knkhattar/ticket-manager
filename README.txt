@@ -12,4 +12,4 @@ TECHNICAL DETAILS
 	3. Derby DB
 	4. JUnit, Maven
 
-We will add requiremnts once this has been developed.
+We will add requirements once this has been developed.
