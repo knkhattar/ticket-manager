@@ -20,6 +20,14 @@ public class AuthController {
 	@Autowired
 	AuthService authService;
 	
+	public AuthService getAuthService() {
+		return authService;
+	}
+
+	public void setAuthService(AuthService authService) {
+		this.authService = authService;
+	}
+
 	@RequestMapping(value = "{name}/{password}", method = RequestMethod.GET)
 	public @ResponseBody
 	AuthStatus getAuthStatusInJSON(@PathVariable String name,

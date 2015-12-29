@@ -9,12 +9,12 @@ import com.kkcom.tm.login.model.AuthStatus;
 @Service
 public class AuthServiceImpl implements AuthService {
 
-	@Autowired
-	AuthStatus authStatus;
+	
 	public AuthStatus authenticate(String username, String password) {
 
 		System.out.println("Inside AuthServiceImpl authenticate ::");
 		
+		AuthStatus authStatus = new AuthStatus();
 		if (username.equals("testuser") && password.equals("testpass")) {
 			authStatus.setAuthenticated(true);
 		} else {
