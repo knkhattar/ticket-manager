@@ -2,14 +2,17 @@
 FUNCTIONAL REQUIREMENT
 
 	1. Login Page
-	2. A JS pop up on login page - indicating authentication successful or failed
+	2. Ticket CRUD Operations
+	3. Logout Link
 
 
 TECHNICAL DETAILS
 
-	1. Angular JS
-	2. Spring + Hibernate - restful web service
-	3. Derby DB
-	4. JUnit, Maven
+	1. Maven
+	2. Spring MVC Rest
+	3. Angular JS
+	4. Spring Security
+	5. Spring oAuth 2.0
+	
+	
 
-We will add requirements once this has been developed.
