@@ -19,7 +19,7 @@ public class AuthController {
 
 	@Autowired
 	AuthService authService;
-	
+
 	public AuthService getAuthService() {
 		return authService;
 	}
@@ -28,14 +28,21 @@ public class AuthController {
 		this.authService = authService;
 	}
 
-	@RequestMapping(value = "{name}/{password}", method = RequestMethod.GET)
-	public @ResponseBody
-	AuthStatus getAuthStatusInJSON(@PathVariable String name,
-			@PathVariable String password) {
-		
+	@RequestMapping(value = "login/{name}/{password}", method = RequestMethod.GET)
+	public @ResponseBody AuthStatus getAuthStatusInJSON(@PathVariable String name, @PathVariable String password) {
+
 		System.out.println("Inside getAuthStatusInJSON ::");
 
 		return authService.authenticate(name, password);
+
+	}
+
+	@RequestMapping(value = "logout/*", method = RequestMethod.GET)
+	public @ResponseBody boolean logout() {
+
+		System.out.println("Inside logout ::");
+
+		return true;
 
 	}
 
