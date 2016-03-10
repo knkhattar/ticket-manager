@@ -1,3 +1,22 @@
-<h2>This is the login page.</h2>
-
-<p><a href="#dashboard">dashboard</a> </p>
+	<form action="#dashboard" method="post">
+		<div align="center">
+		<div  style="height: 100%; width: 100%;"> 
+			<table style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; margin: auto; width: 20%;">
+				<caption>Login</caption>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" ng-model="userName" placeholder="Username" /></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" ng-model="password" placeholder="Password" /></td>
+				</tr>
+				<tr><td><button type="button" ng-click="submit()">Login</button></td></tr>
+			</table>
+		</div>
+	</div>
+	</form>
+	
+	
+	
+	<p><a href="#dashboard">dashboard</a> </p>

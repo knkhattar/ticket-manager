@@ -1,7 +1,7 @@
 <html>
 <body>
 <h2>Welcome !!</h2>
-<p>To lanuch the angularjs app please click <a href="/ticket-manager/angularApp/" >here</a></p>
+<p>To lanuch the angularjs app please click <a href="/ticket-manager/angularApp/index.html" >here</a></p>
 
 <p>Following is the list of web services being used</p>
 
