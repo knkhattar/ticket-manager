@@ -9,7 +9,8 @@ app.config(
 			}).when('/dashboard', {
 				templateUrl : 'views/dashboard.html'
 			}).when('/viewTicket', {
-				templateUrl : 'views/viewTicket.html'
+				templateUrl : 'views/viewTicket.html',
+					controller : 'viewTicketCtrl'
 			}).when('/viewTicketList', {
 				templateUrl : 'views/viewTicketList.html'
 			}).when('/logout', {
@@ -22,16 +23,11 @@ app.config(
 app.controller('authCtrl', function($scope, $http, $location) {
 
 	$scope.submit = function() {
-		alert("Inside submit");
 		var userName = $scope.userName;
 		var password = $scope.password;
 		var wsUrl = "/ticket-manager/rest/auth/login/" + userName + "/" + password
-		alert(wsUrl);
 		$http.get(wsUrl).success(function(data) {
-			alert(JSON.stringify(data));
-			alert(JSON.stringify(data.authenticated));
 			if (data.authenticated == true) {
-				alert('Valid user')
 				$location.path('/dashboard');
 			} else {
 				alert('Wrong credential');
@@ -42,5 +38,22 @@ app.controller('authCtrl', function($scope, $http, $location) {
 		});
 
 	}
+
+});
+
+app.controller('viewTicketCtrl', function($scope, $http, $location) {
+	alert('inside view ticket controller');
+		var userName = $scope.userName;
+		var password = $scope.password;
+		var wsUrl = "/ticket-manager/rest/ticket/getTicket/1";
+		$http.get(wsUrl).success(function(data) {
+           alert('success' + JSON.stringify(data));
+           $scope.ticket = data;
+           
+           alert('ticket::'+$scope.ticket);
+		}).error(function(data) {
+			alert('Error')
+		});
+
 
 });
