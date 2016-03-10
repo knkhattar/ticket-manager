@@ -34,7 +34,7 @@ app.controller('authCtrl', function($scope, $http, $location) {
 			}
 
 		}).error(function(data) {
-			alert('in error')
+			alert('Error in network call')
 		});
 
 	}
@@ -42,17 +42,14 @@ app.controller('authCtrl', function($scope, $http, $location) {
 });
 
 app.controller('viewTicketCtrl', function($scope, $http, $location) {
-	alert('inside view ticket controller');
 		var userName = $scope.userName;
 		var password = $scope.password;
 		var wsUrl = "/ticket-manager/rest/ticket/getTicket/1";
 		$http.get(wsUrl).success(function(data) {
-           alert('success' + JSON.stringify(data));
            $scope.ticket = data;
            
-           alert('ticket::'+$scope.ticket);
 		}).error(function(data) {
-			alert('Error')
+			alert('Error in network call')
 		});
 
 
