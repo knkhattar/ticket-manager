@@ -22,10 +22,11 @@ app.config(
 
 app.controller('authCtrl', function($scope, $http, $location) {
 
+	
 	$scope.submit = function() {
 		var userName = $scope.userName;
 		var password = $scope.password;
-		var wsUrl = "/ticket-manager/rest/auth/login/" + userName + "/" + password
+		var wsUrl = 'ticket-manager/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp&username='+userName+'&password='+password;
 		$http.get(wsUrl).success(function(data) {
 			if (data.authenticated == true) {
 				$location.path('/dashboard');
