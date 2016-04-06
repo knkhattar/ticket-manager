@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
+
+
 
 import com.kkcom.tm.login.model.AuthStatus;
 import com.kkcom.tm.login.svc.AuthService;
@@ -19,6 +22,9 @@ public class AuthController {
 
 	@Autowired
 	AuthService authService;
+	
+	@Autowired
+	private DefaultTokenServices defaultTokenServices;
 
 	public AuthService getAuthService() {
 		return authService;
@@ -37,12 +43,13 @@ public class AuthController {
 
 	}
 
-	@RequestMapping(value = "logout/*", method = RequestMethod.GET)
-	public @ResponseBody boolean logout() {
+	@RequestMapping(value = "logout/{token}", method = RequestMethod.GET)
+	public @ResponseBody String logout(@PathVariable String token) {
 
+		defaultTokenServices.revokeToken(token);
 		System.out.println("Inside logout ::");
 
-		return true;
+		return "{'logout':'done'}";
 
 	}
 
