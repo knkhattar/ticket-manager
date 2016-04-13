@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Login</title>
+<!-- <link rel="stylesheet" href="css/custom.css" /> -->
+<script src="angular.min.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controller='addTicketCtrl'>
+	<div align="center">
+		<div class="wrapdiv" style="height: 100%; width: 100%;">
+			<table class="addticktsview"
+				style="width: 40%; border: 1px solid #ddd;">
+				<caption class="boldhead"
+					style="text-align: left; font-size: 20px; font-weight: bold; padding: 10px;">Add
+					Issue</caption>
+				<tr>
+					<td>Defect Id</td>
+					<td ng-init="defectid">{{defectid}}</td>
+				</tr>
+				<tr>
+					<td>Summary</td>
+					<td><input type="text" ng-model='summ' placeholder="Summary" /></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td><input type="text" ng-model='desc' placeholder="Description" /></td>
+				</tr>
+				<!-- <tr>
+					<td>Assigned To</td>
+					<td><select ng-model='select'>
+							<option>Priyanka</option>
+							<option>Ashish</option>
+					</select></td>
+				</tr> -->
+				<tr>
+					<td></td>
+					<td>
+						<button type="button" ng-click="addTicket();">Add Ticket</button>
+					</td>
+				</tr>
+				
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

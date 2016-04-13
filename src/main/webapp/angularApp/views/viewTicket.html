@@ -4,7 +4,9 @@
 		<thead>
 			<th  style="border: 1px solid black;">Defect Id</th>
 			<th  style="border: 1px solid black;">Summary</th>
+			<th  style="border: 1px solid black;">Description</th>
 			<th  style="border: 1px solid black;">Assigned To</th>
+			<th  style="border: 1px solid black;">Action</th>
 		</thead>
 		<tbody >
 			<tr>
@@ -12,6 +14,7 @@
 				<td  style="border: 1px solid black;">{{ticket.summary}}</td>
 				<td  style="border: 1px solid black;">{{ticket.description}}</td>
 				<td  style="border: 1px solid black;">{{ticket.assignedToId}}</td>
+				<td  style="border: 1px solid black;"><a  href="#/updateTicket/{{ticket.id}}/{{ticket.summary}}/{{ticket.description}}">Edit</a>&nbsp&nbsp<a href="" ng-click="deleteTicket(ticket.id);">Delete</a></td>
 			</tr>
 		</tbody>
 	</table>

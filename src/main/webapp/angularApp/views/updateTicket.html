@@ -1,19 +1,27 @@
 <div align="center">
 	<table style="width: 100%; border: 1px solid #ddd; border-collapse: collapse;">
 		<caption >View Tickets</caption>
-		<thead>
+		<!-- <thead>
 			<th  style="border: 1px solid black;">Defect Id</th>
 			<th  style="border: 1px solid black;">Summary</th>
 			<th  style="border: 1px solid black;">Description</th>
 			<th  style="border: 1px solid black;">Assigned To</th>
-		</thead>
+		</thead> -->
 		<tbody >
-			<tr ng-repeat="ticket in tickets">
+			<tr>
 				
-					<td  style="border: 1px solid black;"><a href="#viewTicket/{{ticket.id}}">{{ticket.id}}</a></td>
-					<td  style="border: 1px solid black;">{{ticket.summary}}</td>
-					<td  style="border: 1px solid black;">{{ticket.description}}</td>
-					<td  style="border: 1px solid black;">{{ticket.assignedToId}}</td>
+					<td  style="border: 1px solid black;">Summary</td>
+					<td  style="border: 1px solid black;"><input type="text" ng-model="ticketSummary" /></td>
+
+			</tr>
+			<tr>		
+					<td  style="border: 1px solid black;">Description</td>
+					<td  style="border: 1px solid black;"><input type="text" ng-model="ticketDescription" /></td>
+				
+			</tr>
+			<tr>		
+					<td  style="border: 1px solid black;"></td>
+					<td  style="border: 1px solid black;"><button ng-click="updateTicket();">Update Ticket</button></td>
 				
 			</tr>
 			<!-- <tr>
