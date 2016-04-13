@@ -46,10 +46,18 @@ public class AuthController {
 	@RequestMapping(value = "logout/{token}", method = RequestMethod.GET)
 	public @ResponseBody String logout(@PathVariable String token) {
 
-		defaultTokenServices.revokeToken(token);
-		System.out.println("Inside logout ::");
+		String retVal = "";
+		try{
+			defaultTokenServices.revokeToken(token);
+			System.out.println("Inside logout ::");
+			retVal = "{'logout':'done'}";
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			retVal = "{'Error':'Error in token removal'}";
+		}
 
-		return "{'logout':'done'}";
+		return retVal;
 
 	}
 
