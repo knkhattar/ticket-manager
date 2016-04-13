@@ -11,13 +11,14 @@ app.controller('addTicketCtrl', function($scope,$http,$location,myService,$route
 	var token = localStorage.getItem('token');
 	
 	
-	var testSum = $scope.summ;
-	var testDesc = $scope.desc;
-
 
 	$scope.addTicket = function()
 	{
-		var wsUrl = obj.wsUrl+"ticket/addTicket/"+localStorage.getItem('defectid')+"/"+testSum+"/"+testDesc+"?access_token="+token;
+		var testSum = $scope.summ;
+		var testDesc = $scope.desc;
+
+		var wsUrl = obj.wsUrl+"secure/ticket/addTicket/"+localStorage.getItem('defectid')+"/"+testSum+"/"+testDesc+"?access_token="+token;
+		alert('kk1'+wsUrl);
 		$http.get(wsUrl).success(function(data) {
 
 			if(data == 'true')

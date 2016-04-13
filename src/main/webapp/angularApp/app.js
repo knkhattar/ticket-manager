@@ -21,7 +21,8 @@ app.config(
 				templateUrl : 'views/updateTicket.html',
 				controller : 'updateTicketCtrl'
 			}).when('/logout', {
-				templateUrl : 'views/logout.html'
+				templateUrl : 'views/logout.html',
+				controller : 'logoutCtrl'
 			}).otherwise({
 				redirectTo : '/'
 			});

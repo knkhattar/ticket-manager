@@ -15,11 +15,11 @@
 
 <ol>
 	<li><a href="/ticket-manager/auth/login/testuser/testpass">Not used now</a></li>
-	<li><a href="/ticket-manager/ticket/addTicket/1/testSum/testDesc?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">addTicket</a></li>
-	<li><a href="/ticket-manager/ticket/getTicket/1?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">getTicket</a></li>
-	<li><a href="/ticket-manager/ticket/getTickets/111?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">getTickets</a></li>
-	<li><a href="/ticket-manager/ticket/updateTicket/1/testSum/testDesc?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">updateTicket</a></li>
-	<li><a href="/ticket-manager/ticket/deleteTicket/1?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">deleteTicket</a></li>
+	<li><a href="/ticket-manager/secure/ticket/addTicket/1/testSum/testDesc?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">addTicket</a></li>
+	<li><a href="/ticket-manager/secure/ticket/getTicket/1?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">getTicket</a></li>
+	<li><a href="/ticket-manager/secure/ticket/getTickets/111?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">getTickets</a></li>
+	<li><a href="/ticket-manager/secure/ticket/updateTicket/1/testSum/testDesc?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">updateTicket</a></li>
+	<li><a href="/ticket-manager/secure/ticket/deleteTicket/1?access_token=932c33cc-c6e6-409b-a71a-0187f85f17b0">deleteTicket</a></li>
 	<li><a href="/ticket-manager/auth/logout/ab01968a-745f-4b37-8a81-17a0ab659fc1">logout</a></li>
 </ol>
 

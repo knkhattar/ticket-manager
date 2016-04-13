@@ -8,7 +8,7 @@ app.controller('updateTicketCtrl', function($scope,$http,$routeParams,myService,
 	{
 		//alert($scope.ticketSummary+'  '+$scope.ticketDescription)
 
-		var wsUrl = obj.wsUrl+"ticket/updateTicket/"+ticketId+"/"+$scope.ticketSummary+"/"+$scope.ticketDescription+"?access_token="+token;
+		var wsUrl = obj.wsUrl+"secure/ticket/updateTicket/"+ticketId+"/"+$scope.ticketSummary+"/"+$scope.ticketDescription+"?access_token="+token;
 		
 		$http.get(wsUrl).success(function(data) {
 

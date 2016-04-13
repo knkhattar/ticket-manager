@@ -50,7 +50,7 @@ public class AuthController {
 		try{
 			defaultTokenServices.revokeToken(token);
 			System.out.println("Inside logout ::");
-			retVal = "{'logout':'done'}";
+			retVal = "{\"logout\":\"done\"}";
 			
 		}catch(Exception e){
 			e.printStackTrace();

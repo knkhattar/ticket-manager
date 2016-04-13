@@ -1,13 +1,14 @@
 app.controller('viewTicketListCtrl', function($scope,$http,myService,$location,$route){
 		var token = localStorage.getItem('token');
-		var wsUrl = obj.wsUrl+"ticket/getTickets/111?access_token="+token;
-		//console.log(wsUrl);
+		var wsUrl = obj.wsUrl+"secure/ticket/getTickets/111?access_token="+token;
 		$http.get(wsUrl).success(function(data) {
 
-			//alert(data)
+			console.log('success'+data);
            $scope.tickets = data;
            
+           
 		}).error(function(data,status) {
+			console.log('failure'+status);
 			//alert(status)
 			//alert('Error in network call')
 

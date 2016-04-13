@@ -3,8 +3,8 @@ app.controller('viewTicketCtrl', function($scope,$http,$routeParams,$location,my
 		var userName = $scope.userName;
 		var password = $scope.password;
 		
-		//var wsUrl = "/ticket-manager/rest/ticket/getTicket/1?access_token="+token;
-		var wsUrl = obj.wsUrl+"ticket/getTicket/"+$routeParams.ticketid+"?access_token="+token;
+		//var wsUrl = "/ticket-manager/secure/ticket/getTicket/1?access_token="+token;
+		var wsUrl = obj.wsUrl+"secure/ticket/getTicket/"+$routeParams.ticketid+"?access_token="+token;
 		console.log(wsUrl);
 		$http.get(wsUrl).success(function(data) {
 
@@ -28,7 +28,7 @@ app.controller('viewTicketCtrl', function($scope,$http,$routeParams,$location,my
 		$scope.deleteTicket = function(ticketid)
 		{
 			alert("deleteTicket");
-			var wsUrl = obj.wsUrl+"ticket/deleteTicket/"+$routeParams.ticketid+"?access_token="+token;
+			var wsUrl = obj.wsUrl+"secure/ticket/deleteTicket/"+$routeParams.ticketid+"?access_token="+token;
 			$http.get(wsUrl).success(function(data) {
 				//alert(data);
 			if(data == 'true'){
